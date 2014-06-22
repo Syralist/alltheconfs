@@ -23,9 +23,9 @@ alias mkdir='nocorrect mkdir'
 alias man='nocorrect man'
 alias ll='ls --color=auto -lA'
 alias ..='cd ..'
-alias cd..='cd ../..'
-alias cd....='cd ../../..'
-alias cd.....='cd ../../../..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias cd..='cd ..'
 alias cd/='cd /'
 alias z='vim ~/.zshrc;src'
 
@@ -33,6 +33,10 @@ alias z='vim ~/.zshrc;src'
 autoload -U promptinit
 promptinit
 prompt adam2
+
+if [ -f ~/.texpaths ]; then
+    source ~/.texpaths
+fi
 
 ## invoke this every time when u change .zshrc to
 ## recompile it.
