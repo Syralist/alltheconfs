@@ -1,7 +1,9 @@
 # The following lines were added by compinstall
 
+zmodload -i zsh/complist
 zstyle ':completion:*' completer _expand _complete _ignored _approximate
 zstyle ':completion:*' max-errors 2
+zstyle ':completion:*' menu select=2
 zstyle :compinstall filename '/home/thomas/.zshrc'
 
 autoload -Uz compinit
