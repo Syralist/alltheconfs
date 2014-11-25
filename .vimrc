@@ -202,6 +202,19 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 "*****************************************************************************
 """ Mappings
 "*****************************************************************************
+" vim-latex
+if has('gui_running')
+    set grepprg=grep\ -nH\ $*
+    let g:tex_flavor='latex'
+endif
+
+au BufEnter *.tex set autowrite
+let g:Tex_DefaultTargetFormat = 'pdf'
+let g:Tex_MultipleCompileFormats = 'pdf'
+let g:Tex_CompileRule_pdf = 'pdflatex -synctex=1 -interaction=nonstopmode $*'
+let g:Tex_GotoError = 0
+let g:Tex_ViewRule_pdf = 'evince'
+
 " vim-python
 autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=4 colorcolumn=79
     \ formatoptions+=croq softtabstop=4 smartindent
