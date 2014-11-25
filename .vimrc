@@ -205,10 +205,10 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 " vim-latex
 if has('gui_running')
     set grepprg=grep\ -nH\ $*
-    let g:tex_flavor='latex'
 endif
 
 au BufEnter *.tex set autowrite
+let g:tex_flavor='latex'
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_MultipleCompileFormats = 'pdf'
 let g:Tex_CompileRule_pdf = 'pdflatex -synctex=1 -interaction=nonstopmode $*'
