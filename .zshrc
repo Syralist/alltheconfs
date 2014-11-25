@@ -30,6 +30,7 @@ alias ....='cd ../../..'
 alias cd..='cd ..'
 alias cd/='cd /'
 alias z='vim ~/.zshrc;src'
+alias :q='exit'
 
 #Enable this for a nice interactive way to get a decent prompt.
 autoload -U promptinit
