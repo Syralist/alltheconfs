@@ -45,6 +45,9 @@ NeoBundle "scrooloose/syntastic"
 NeoBundle "majutsushi/tagbar"
 NeoBundle "Yggdroot/indentLine"
 
+"" vim-arduino
+NeoBundle "jplaut/vim-arduino-ino"
+
 call neobundle#end()
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
@@ -71,7 +74,7 @@ set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
 "" Map leader to ,
-let mapleader=','
+" let mapleader=','
 
 " Show matching brackets when text indicator is over them
 set showmatch
