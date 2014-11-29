@@ -35,7 +35,10 @@ alias :q='exit'
 #Enable this for a nice interactive way to get a decent prompt.
 autoload -U promptinit
 promptinit
-prompt adam2
+# prompt adam2
+if [ -f ~/.zshprompt ]; then
+    source ~/.zshprompt
+fi
 
 if [ -f ~/.texpaths ]; then
     source ~/.texpaths
