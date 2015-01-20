@@ -1,0 +1,9 @@
+[user]
+	email = thomas.helmke@gmx.de
+	name = Thomas Helmke
+[core]
+	editor = vim
+[push]
+	default = simple
+[alias]
+	lg = log --color --graph --pretty=format:'%C(auto)%h -%d %s %Cgreen(%cr) %C(bold blue)<%an>' --abbrev-commit
