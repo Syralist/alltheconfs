@@ -5,4 +5,4 @@
 // @version     1
 // @grant       none
 // ==/UserScript==
-$('#head-wrapper').css('top', '32px');
+$('#head-wrapper').css('top', '28px');
