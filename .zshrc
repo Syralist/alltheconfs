@@ -55,3 +55,5 @@ src ()
 	[ -f ~/.zcompdump.zwc.old ] && rm -f ~/.zcompdump.zwc.old
 	source ~/.zshrc
 }
+
+export EDITOR=vim
