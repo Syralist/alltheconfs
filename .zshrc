@@ -14,6 +14,8 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 setopt appendhistory autocd
+bindkey "OA" history-search-backward
+bindkey "OB" history-search-forward
 bindkey -v
 # End of lines configured by zsh-newuser-install
 
