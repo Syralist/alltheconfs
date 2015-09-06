@@ -33,6 +33,7 @@ alias cd..='cd ..'
 alias cd/='cd /'
 alias z='vim ~/.zshrc;src'
 alias :q='exit'
+alias please='sudo $(fc -ln -1)'
 
 #Enable this for a nice interactive way to get a decent prompt.
 autoload -U promptinit
