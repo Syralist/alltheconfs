@@ -48,6 +48,9 @@ NeoBundle "Yggdroot/indentLine"
 "" vim-arduino
 NeoBundle "jplaut/vim-arduino-ino"
 
+"" vim-openscad
+NeoBundle "sirtaj/vim-openscad"
+
 call neobundle#end()
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
