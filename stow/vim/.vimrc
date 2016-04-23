@@ -44,6 +44,7 @@ NeoBundle "davidhalter/jedi-vim"
 NeoBundle "scrooloose/syntastic"
 NeoBundle "majutsushi/tagbar"
 NeoBundle "Yggdroot/indentLine"
+NeoBundle "joonty/vdebug"
 
 "" vim-arduino
 NeoBundle "jplaut/vim-arduino-ino"
