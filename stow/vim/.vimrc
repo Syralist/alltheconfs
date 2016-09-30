@@ -113,6 +113,9 @@ set smartcase       "Override the ignorecase option if the search pattern contai
 "commands)
 :nnoremap <CR> :nohlsearch<CR>/<BS><CR>
 
+"when switching buffer try to use existing tab or create new one
+:set switchbuf+=usetab,newtab
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
