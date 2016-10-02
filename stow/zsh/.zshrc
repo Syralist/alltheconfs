@@ -39,6 +39,10 @@ alias lstty='ls /dev/tty*'
 #Enable this for a nice interactive way to get a decent prompt.
 autoload -U promptinit
 promptinit
+
+autoload -U colors
+colors
+
 # prompt adam2
 if [ -f ~/.zshprompt ]; then
     source ~/.zshprompt
