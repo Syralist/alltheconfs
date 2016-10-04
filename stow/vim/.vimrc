@@ -66,6 +66,13 @@ NeoBundleCheck
 filetype plugin on
 filetype indent on
 
+" autoreload vimrc
+
+augroup myvimrc
+    au!
+    au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC
+augroup END
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -115,6 +122,14 @@ set smartcase       "Override the ignorecase option if the search pattern contai
 
 "when switching buffer try to use existing tab or create new one
 :set switchbuf+=usetab,newtab
+
+"lvim<enter>: search word under cursor in files with same extension
+"lvim<space>: expand default search and put cursor in front of filepattern
+cabbrev lvim
+      \ lvim /\<lt><C-R><C-W>\>/gj
+      \ *<C-R>=(expand("%:e")=="" ? "" : ".".expand("%:e"))<CR>
+      \ <Bar> lw
+      \ <C-Left><C-Left><C-Left>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
