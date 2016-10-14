@@ -35,6 +35,15 @@ NeoBundle 'airblade/vim-gitgutter'  "shown line modification in gutter
 NeoBundle 'tomasr/molokai'          "color theme
 NeoBundle 'sheerun/vim-polyglot'    "highlighting for many languages
 
+NeoBundle 'Valloric/YouCompleteMe', {
+     \ 'build' : {
+     \     'mac' : './install.sh',
+     \     'unix' : './install.sh',
+     \     'windows' : './install.sh',
+     \     'cygwin' : './install.sh'
+     \    }
+     \ }
+
 "" Snippets
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'honza/vim-snippets'
@@ -294,7 +303,7 @@ let g:tagbar_autofocus = 1
 function! HasPaste()
 if &paste
     return 'PASTE MODE  '
-en
+endif
 return ''
 endfunction
 
