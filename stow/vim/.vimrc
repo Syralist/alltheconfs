@@ -156,6 +156,8 @@ set tabstop=4
 set ai "Auto indent
 set si "Smart indent
 
+nmap <leader>c :set conceallevel=0<CR>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
