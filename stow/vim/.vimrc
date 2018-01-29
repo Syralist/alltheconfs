@@ -1,73 +1,61 @@
+set nocompatible               " Be iMproved
+filetype off
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
 "*****************************************************************************
-"" NeoBundle core
+"" Vundle install packages
 "*****************************************************************************
+Plugin 'tpope/vim-commentary'    "for commenting blocks
+Plugin 'tpope/vim-fugitive'      "a git wrapper
+Plugin 'vim-airline/vim-airline'       "fancy statusbar
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'airblade/vim-gitgutter'  "shown line modification in gutter
+Plugin 'tomasr/molokai'          "color theme
+Plugin 'sheerun/vim-polyglot'    "highlighting for many languages
 
-if has('vim_starting')
-    set nocompatible               " Be iMproved
-
-    " Required:
-    set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-
-let neobundle_readme=expand('~/.vim/bundle/neobundle.vim/README.md')
-
-if !filereadable(neobundle_readme)
-    echo "Installing NeoBundle..."
-    echo ""
-    silent !mkdir -p ~/.vim/bundle
-    silent !git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim/
-endif
-
-" Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
-
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-"*****************************************************************************
-"" NeoBundle install packages
-"*****************************************************************************
-NeoBundle 'tpope/vim-commentary'    "for commenting blocks
-NeoBundle 'tpope/vim-fugitive'      "a git wrapper
-NeoBundle 'bling/vim-airline'       "fancy statusbar
-NeoBundle 'airblade/vim-gitgutter'  "shown line modification in gutter
-NeoBundle 'tomasr/molokai'          "color theme
-NeoBundle 'sheerun/vim-polyglot'    "highlighting for many languages
-
-NeoBundle 'Valloric/YouCompleteMe', {
-     \ 'build' : {
-     \     'mac' : './install.sh',
-     \     'unix' : './install.sh',
-     \     'windows' : './install.sh',
-     \     'cygwin' : './install.sh'
-     \    }
-     \ }
-
+Plugin 'Valloric/YouCompleteMe'
 "" Snippets
-NeoBundle 'SirVer/ultisnips'
-NeoBundle 'honza/vim-snippets'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 "" Python Bundle
-NeoBundle "davidhalter/jedi-vim"
-NeoBundle "scrooloose/syntastic"
-NeoBundle "majutsushi/tagbar"
-NeoBundle "Yggdroot/indentLine"
-NeoBundle "joonty/vdebug"
+Plugin 'davidhalter/jedi-vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'majutsushi/tagbar'
+Plugin 'Yggdroot/indentLine'
+Plugin 'joonty/vdebug'
 
 "" vim-arduino
-NeoBundle "jplaut/vim-arduino-ino"
+Plugin 'jplaut/vim-arduino-ino'
 
 "" vim-openscad
-NeoBundle "sirtaj/vim-openscad"
+Plugin 'sirtaj/vim-openscad'
 
 "" vim-pony
-NeoBundle "jakwings/vim-pony"
+Plugin 'jakwings/vim-pony'
 
-call neobundle#end()
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just
+" :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to
+" auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
