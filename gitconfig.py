@@ -15,8 +15,10 @@ print(ssh_add.stdout.read())
 
 # copy ssh-key
 print("SSH Key kopieren")
-xclip_cmd = 'xclip < ~/.ssh/id_rsa.pub'.split()
-xclip = subprocess.Popen(xclip_cmd, stdout=subprocess.PIPE, shell=True)
+cat_cmd = 'cat ~/.ssh./id_rsa.pub'.split()
+cat = subprocess.Popen(cat_cmd, stdout=subprocess.PIPE, shell=True)
+xclip_cmd = 'xclip'.split()
+xclip = subprocess.Popen(xclip_cmd, stdin=cat.stdout, stdout=subprocess.PIPE, shell=False)
 print(xclip.stdout.read())
 print("SSH Key ist in der Zwischenablage. Auf dieser Seite einfügen: https://github.com/settings/ssh/new ")
 wait = input("Enter drücken wenn es weitergehen kann.")
