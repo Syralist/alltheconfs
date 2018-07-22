@@ -1,5 +1,7 @@
 import subprocess
 import os
+import shutil
+import getpass
 
 # install zsh
 print("zsh installieren")
@@ -9,7 +11,7 @@ print(sudo.stdout.read())
 
 # change to zsh
 print("zsh als Standard setzen")
-chsh_req = "chsh -s /usr/bin/zsh thomas".split()
+chsh_req = f"chsh -s {shutil.which('zsh')} {getpass.getuser()}".split()
 chsh = subprocess.Popen(["sudo", "-S"] + chsh_req, stdout=subprocess.PIPE)
 print(sudo.stdout.read())
 print("jetzt neu anmelden!")
