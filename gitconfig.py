@@ -15,7 +15,7 @@ print(ssh_add.stdout.read())
 
 # copy ssh-key
 print("SSH public key:")
-with open("~/.ssh/id_rsa.pub") as f:
+with open(os.path.expanduser("~/.ssh/id_rsa.pub")) as f:
     print(f.read())
 print("SSH Key auf dieser Seite einfügen: https://github.com/settings/ssh/new ")
 wait = input("Enter drücken wenn es weitergehen kann.")
