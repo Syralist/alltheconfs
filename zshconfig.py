@@ -9,7 +9,7 @@ print(sudo.stdout.read())
 
 # change to zsh
 print("zsh als Standard setzen")
-chsh_req = "chsh -s /usr/bin/zsh".split()
-chsh = subprocess.Popen(chsh_req, stdout=subprocess.PIPE)
+chsh_req = "chsh -s /usr/bin/zsh thomas".split()
+chsh = subprocess.Popen(["sudo", "-S"] + chsh_req, stdout=subprocess.PIPE)
 print(sudo.stdout.read())
 print("jetzt neu anmelden!")
