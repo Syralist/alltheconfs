@@ -3,7 +3,7 @@ import os
 
 # install packages for coding
 print("pakete installieren")
-install_req = "apt-get install -y aptitude vim-nox build-essential python3-pip cmake code gimp inkscape".split()
+install_req = "apt-get install -y aptitude vim-nox build-essential python3-pip cmake code gimp inkscape kicad".split()
 sudo = subprocess.Popen(["sudo", "-S"] + install_req, stdout=subprocess.PIPE)
 print(sudo.stdout.read())
 
