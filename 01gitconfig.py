@@ -20,6 +20,12 @@ with open(os.path.expanduser("~/.ssh/id_rsa.pub")) as f:
 print("SSH Key auf dieser Seite einfügen: https://github.com/settings/ssh/new ")
 wait = input("Enter drücken wenn es weitergehen kann.")
 
+# install git
+print("git installieren")
+install_req = "apt-get install -y git".split()
+sudo = subprocess.Popen(["sudo", "-S"] + install_req, stdout=subprocess.PIPE)
+print(sudo.stdout.read())
+
 # workspace erzeugen und Repository klonen
 print("workspace erzeugen und alltheconfs klonen")
 os.mkdir("workspace")
