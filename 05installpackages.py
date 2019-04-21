@@ -20,7 +20,6 @@ extensions = ["alexcvzz.vscode-sqlite",
         "ms-vscode.cpptools",
         "PeterJausovec.vscode-docker",
         "PKief.material-icon-theme",
-        "robertohuertasm.vscode-icons",
         "vsciot-vscode.vscode-arduino",
         "vscodevim.vim"]
 for ext in extensions:
