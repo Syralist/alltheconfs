@@ -21,4 +21,5 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io
 
 # add user to group
 echo "user zur docker gruppe hinzufügen"
-sudo usermod -aG docker your-user
+sudo groupadd docker
+sudo usermod -aG docker $USER
