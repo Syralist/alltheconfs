@@ -10,12 +10,15 @@ print(sudo.stdout.read())
 # install VS Code extensions
 print("VS Code Extensions installieren")
 install_req = "code --install-extension".split()
-extensions = ["DotJoshJohnson.xml",
+extensions = ["alexcvzz.vscode-sqlite",
+        "DotJoshJohnson.xml",
+        "efbenson.scad",
         "fallenwood.vimL",
         "James-Yu.latex-workshop",
         "MS-CEINTL.vscode-language-pack-de",
         "ms-python.python",
         "ms-vscode.cpptools",
+        "PeterJausovec.vscode-docker",
         "PKief.material-icon-theme",
         "robertohuertasm.vscode-icons",
         "vsciot-vscode.vscode-arduino",
