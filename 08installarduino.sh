@@ -134,6 +134,15 @@ ARDUINO_VERSION
     	echo "Task completed."
     	echo "Deleting compressed file."
     rm "$directory"/arduino-"$download".tar.xz > /dev/null
+        echo "File deleted."
+        echo "Run installer."
+    cd "$directory"
+    sudo ./install.sh
+        echo "Installer completed."
+        echo "Installing additional boards."
+    arduino --pref "boardsmanager.additional.urls=http://arduino.esp8266.com/stable/package_esp8266com_index.json,https://dl.espressif.com/dl/package_esp32_index.json" --save-prefs
+    arduino --install-boards esp8266:esp8266 --save-prefs
+    arduino --install-boards esp32:esp32 --save-prefs
 
     read -r -p"Installation complete press any key to close Arduino IDE installer..." potato
     clear
