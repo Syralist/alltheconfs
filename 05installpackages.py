@@ -18,10 +18,14 @@ extensions = ["alexcvzz.vscode-sqlite",
         "MS-CEINTL.vscode-language-pack-de",
         "ms-python.python",
         "ms-vscode.cpptools",
-        "PeterJausovec.vscode-docker",
+        "ms-azuretools.vscode-docker",
         "PKief.material-icon-theme",
         "vsciot-vscode.vscode-arduino",
-        "vscodevim.vim"]
+        "vscodevim.vim",
+        "redhat.vscode-yaml",
+        "dpkshrma.insert-iso-timestamp",
+        "rusnasonov.vscode-hugo",
+        "bungcip.better-toml"]
 for ext in extensions:
     sudo = subprocess.Popen(install_req + [ext], stdout=subprocess.PIPE)
     print(sudo.stdout.read())
